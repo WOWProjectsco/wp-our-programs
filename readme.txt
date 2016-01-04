@@ -18,7 +18,7 @@ Display organization programs with descriptions and links as a post.
 
 = Organization Programs Management =
 
-"Our Programs by WOWDevShop" is a clean and easy-to-use organization programs management system for WordPress. Load in your programs and display them on a page as posts.
+"Our Programs by WOWDevShop" is a clean and easy-to-use organization programs management system for WordPress. Load in your programs and display them on a page as posts, with their own categories.
 
 = Support =
 

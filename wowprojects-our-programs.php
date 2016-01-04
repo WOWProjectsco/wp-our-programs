@@ -62,8 +62,8 @@ add_action( 'init', 'create_program_taxonomies', 0 );
 function create_program_taxonomies() {
     //Add new taxonomi, make it hierarchical (like categories)
     $labels = array(
-        'name'              => _x( 'Categories', 'taxonomy general name' ),
-        'singular_name'     => _x( 'Category', 'taxonomy singular name' ),
+        'name'              => _x( 'Program Categories', 'taxonomy general name' ),
+        'singular_name'     => _x( 'Program Category', 'taxonomy singular name' ),
         'search_items'      => __( 'Search Categories' ),
         'all_items'         => __( 'All Categories' ),
         'parent_item'       => __( 'Parent Category' ),
@@ -72,7 +72,7 @@ function create_program_taxonomies() {
         'update_item'       => __( 'Update Category' ),
         'add_new_item'      => __( 'Add New Category' ),
         'new_item_name'     => __( 'New Category Name' ),
-        'menu_name'         => __( 'Category' ),
+        'menu_name'         => __( 'Program Category' ),
     );
 
 
