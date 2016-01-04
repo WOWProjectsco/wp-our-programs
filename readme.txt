@@ -3,7 +3,7 @@
 
 
 === Our Programs by WOWDevShop ===
-Contributors: wowdevshop, xicoofficial
+Contributors: xicoofficial, wowdevshop
 Donate link: http://wowdevshop.com/
 Tags: programs, company programs, program category, widget, organization programs
 Requires at least: 3.8
