@@ -46,6 +46,7 @@ function wpmudev_create_post_type() {
 		'exclude_from_search' => false,
 		'capability_type' => 'post',
 		'rewrite' => array( 'slug' => 'programs' ),
+        'menu_icon' => 'dashicons-format-aside',
 		)
 	);
 }
