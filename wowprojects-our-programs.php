@@ -4,7 +4,7 @@
 * Plugin Name: Our Programs
 * Plugin URI: http://wowdevshop.com
 * Description: This plugin registers the 'program' post type, it let's you manage your companies programs.
-* Author: WowDevHop
+* Author: XicoOfficial
 * Version: 1.0.1
 * License: GPLv2
 * Author URI: http://wowdevshop.com
