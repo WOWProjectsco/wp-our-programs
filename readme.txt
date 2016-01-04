@@ -83,7 +83,11 @@ We encourage everyone to contribute their ideas, thoughts and code snippets. Thi
 
 3. Single organization program displayed on the front-end with a little CSS.
 
-== Upgrade Notice =
+== Changelog ==
+
+No changelogs yet.
+
+== Upgrade Notice ==
 
 = 1.0.0 =
 * Initial release. Yeah!
