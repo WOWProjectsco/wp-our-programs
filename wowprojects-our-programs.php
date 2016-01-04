@@ -16,7 +16,7 @@
 * @since 1.0.0
 */
 
-
+add_action( 'init', 'wpmudev_create_post_type' );
 
 // register custom post type to work with
 function wpmudev_create_post_type() {
@@ -50,5 +50,5 @@ function wpmudev_create_post_type() {
 		)
 	);
 }
-add_action( 'init', 'wpmudev_create_post_type' );
+
 ?>

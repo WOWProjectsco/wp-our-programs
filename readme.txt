@@ -77,9 +77,11 @@ We encourage everyone to contribute their ideas, thoughts and code snippets. Thi
 
 == Screenshots ==
 
-1. The team member profile management screen within the WordPress admin.
+1. The organization program management screen within the WordPress admin.
 
-2. The team members displayed on the front-end with a little CSS.
+2. The organization programs displayed on the front-end with a little CSS.
+
+3. Single organization program displayed on the front-end with a little CSS.
 
 == Upgrade Notice =
 
