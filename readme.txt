@@ -1,7 +1,3 @@
-# wp-our-programs
- This plugin registers the 'product' post type, it let's you manage your company programs.
-
-
 === Our Programs by WOWDevShop ===
 Contributors: XicoOfficial, wowdevshop
 Donate link: http://wowdevshop.com/
