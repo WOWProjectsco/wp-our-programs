@@ -23,7 +23,7 @@ Looking for a helping hand? [View plugin documentation](http://http://docs.wowde
 = Get Involved =
 
 Looking to contribute code to this plugin? Go ahead and [fork the repository over at GitHub](https://github.com/wowdevshop/wp-our-programs).
-(submit pull requests to the latest "release-" branch)
+(submit pull requests to the latest "release-" tag)
 
 == Usage ==
 
