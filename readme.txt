@@ -18,7 +18,7 @@ Display organization programs with descriptions and links as a post.
 
 = Support =
 
-Looking for a helping hand? [View plugin documentation](http://http://docs.wowdevshop.com/index.php?title=Wordpress/our-programs).
+Looking for a helping hand? [View plugin documentation](http://docs.wowdevshop.com/Wordpress/our-programs).
 
 = Get Involved =
 
