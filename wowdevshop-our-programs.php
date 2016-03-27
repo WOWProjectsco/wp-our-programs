@@ -16,10 +16,10 @@
 * @since 1.0.0
 */
 
-add_action( 'init', 'wpmudev_create_post_type' );
+add_action( 'init', 'wds_our_programs_create_post_type' );
 
 // register custom post type to work with
-function wpmudev_create_post_type() {
+function wds_our_programs_create_post_type() {
 	// set up labels
 	$labels = array(
  		'name' => 'Programs',
@@ -55,11 +55,11 @@ function wpmudev_create_post_type() {
 
 
 // hook into the init action and call create_book_taxonomies when it fires
-add_action( 'init', 'create_program_taxonomies', 0 );
+add_action( 'init', 'wds_our_programs_create_program_taxonomies', 0 );
 
 
 // Create own taxonomies for the opst type "program"
-function create_program_taxonomies() {
+function wds_our_programs_create_program_taxonomies() {
     //Add new taxonomi, make it hierarchical (like categories)
     $labels = array(
         'name'              => _x( 'Program Categories', 'taxonomy general name' ),
