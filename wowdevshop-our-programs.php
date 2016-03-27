@@ -32,38 +32,48 @@ add_action( 'plugins_loaded', 'wds_our_programs_load_plugin_textdomain' );
 //
 add_action( 'init', 'wds_our_programs_create_post_type' );
 
-// register custom post type to work with
+/**
+ * register custom post type to work with
+ * @since 1.0.0
+ */
 function wds_our_programs_create_post_type() {
 	// set up labels
 	$labels = array(
- 		'name' => 'Programs',
-    	'singular_name' => 'Program',
-    	'add_new' => 'Add New Program',
-    	'add_new_item' => 'Add New Program',
-    	'edit_item' => 'Edit Program',
-    	'new_item' => 'New Program',
-    	'all_items' => 'All Programs',
-    	'view_item' => 'View Program',
-    	'search_items' => 'Search Programs',
-    	'not_found' =>  'No Program Found',
-    	'not_found_in_trash' => 'No Program found in Trash',
-    	'parent_item_colon' => '',
-    	'menu_name' => 'Programs',
+ 		'name'               => __('Programs', 'our-programs-by-wowdevshop'),
+    	'singular_name'      => __('Program', 'our-programs-by-wowdevshop'),
+    	'add_new'            => __('Add New Program', 'our-programs-by-wowdevshop'),
+    	'add_new_item'       => __('Add New Program', 'our-programs-by-wowdevshop'),
+    	'edit_item'          => __('Edit Program', 'our-programs-by-wowdevshop'),
+    	'new_item'           => __('New Program', 'our-programs-by-wowdevshop'),
+    	'all_items'          => __('All Programs', 'our-programs-by-wowdevshop'),
+    	'view_item'          => __('View Program', 'our-programs-by-wowdevshop'),
+    	'search_items'       => __('Search Programs', 'our-programs-by-wowdevshop'),
+    	'not_found'          => __('No Program Found', 'our-programs-by-wowdevshop'),
+    	'not_found_in_trash' => __('No Program found in Trash', 'our-programs-by-wowdevshop'),
+    	'parent_item_colon'  => '',
+    	'menu_name'          => __('Programs', 'our-programs-by-wowdevshop'),
+        'archives'           => __('Programs Archives', 'our-programs-by-wowdevshop')
     );
+
+    $args = array(
+        'labels'                => $labels,
+        'public'                => true,
+        'publicly_queryable'    => true,
+        'taxonomies'            => array('program-category' ),
+        'show_ui'               => true,
+        'query_var'             => true,
+        'menu_icon'             => 'dashicons-format-aside',
+        'rewrite'               => true,
+        'capability_type'       => 'post',
+        'hierarchical'          => true,
+        'menu_position'         => 6,
+        'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail','page-attributes' ),
+        'has_archive'           => true,
+        'exclude_from_search'   => false
+    );
+
     //register post type
-	register_post_type( 'program', array(
-		'labels' => $labels,
-		'has_archive' => true,
- 		'public' => true,
-		'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail','page-attributes' ),
-		'taxonomies' => array('program-category' ),
-		'exclude_from_search' => false,
-		'capability_type' => 'post',
-		'rewrite' => array( 'slug' => 'programs' ),
-        'menu_icon' => 'dashicons-format-aside',
-        'menu_position' => 6
-		)
-	);
+	register_post_type( 'program', $args);
 }
 
 
@@ -71,22 +81,24 @@ function wds_our_programs_create_post_type() {
 // hook into the init action and call create_book_taxonomies when it fires
 add_action( 'init', 'wds_our_programs_create_program_taxonomies', 0 );
 
-
-// Create own taxonomies for the opst type "program"
+/**
+ * Create own taxonomies for the post type "program"
+ * @since 1.0.0
+ */
 function wds_our_programs_create_program_taxonomies() {
     //Add new taxonomi, make it hierarchical (like categories)
     $labels = array(
-        'name'              => _x( 'Program Categories', 'taxonomy general name' ),
-        'singular_name'     => _x( 'Program Category', 'taxonomy singular name' ),
-        'search_items'      => __( 'Search Categories' ),
-        'all_items'         => __( 'All Categories' ),
-        'parent_item'       => __( 'Parent Category' ),
-        'parent_item_colon' => __( 'Parent Category:' ),
-        'edit_item'         => __( 'Edit Category' ),
-        'update_item'       => __( 'Update Category' ),
-        'add_new_item'      => __( 'Add New Category' ),
-        'new_item_name'     => __( 'New Category Name' ),
-        'menu_name'         => __( 'Program Category' ),
+        'name'              => __( 'Program Categories', 'our-programs-by-wowdevshop'),
+        'singular_name'     => __( 'Program Category', 'our-programs-by-wowdevshop'),
+        'search_items'      => __( 'Search Program Categories', 'our-programs-by-wowdevshop'),
+        'all_items'         => __( 'All Program Categories', 'our-programs-by-wowdevshop'),
+        'parent_item'       => __( 'Parent Program Category', 'our-programs-by-wowdevshop'),
+        'parent_item_colon' => __( 'Parent Program Category:', 'our-programs-by-wowdevshop'),
+        'edit_item'         => __( 'Edit Program Category', 'our-programs-by-wowdevshop'),
+        'update_item'       => __( 'Update Program Category', 'our-programs-by-wowdevshop'),
+        'add_new_item'      => __( 'Add New Program Category', 'our-programs-by-wowdevshop'),
+        'new_item_name'     => __( 'New Program Category Name', 'our-programs-by-wowdevshop'),
+        'menu_name'         => __( 'Program Category', 'our-programs-by-wowdevshop')
     );
 
 
@@ -96,6 +108,7 @@ function wds_our_programs_create_program_taxonomies() {
         'show_ui'           => true,
         'show_admin_column' => true,
         'query_var'         => true,
+        'public'            => true,
         'rewrite'           => array( 'slug' => 'program-category' ),
     );
 
