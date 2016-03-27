@@ -10,8 +10,8 @@
 * Author URI: http://wowdevshop.com
 * Text Domain: our-programs-by-wowdevshop
 *
-* @package WordPress
-* @subpackage WowDevShop_Our_Programs
+* @package WOWDevShop
+* @subpackage OurPrograms
 * @author XicoOfficial
 * @since 1.0.0
 */
@@ -113,6 +113,32 @@ function wds_our_programs_create_program_taxonomies() {
     );
 
     register_taxonomy( 'program-category', array( 'program' ), $args );
+}
+
+
+
+add_filter( 'template_include', 'wds_our_programs_include_template_function', 1 );
+
+/**
+ * Checks if there are no defined single and archive templates
+ * for the 'Programs' custom post type on the theme, and if not
+ * use the ones defined inseide de plugin.
+ * @param  String $template_path url of the template
+ * @since 1.2.0
+ */
+function wds_our_programs_include_template_function( $template_path ) {
+    if ( get_post_type() == 'program' ) {
+        if ( is_single() ) {
+            // checks if the file exists in the theme first,
+            // otherwise serve the file from the plugin
+            if ( $theme_file = locate_template( array ( 'single-program.php' ) ) ) {
+                $template_path = $theme_file;
+            } else {
+                $template_path = plugin_dir_path( __FILE__ ) . '/includes/single-program.php';
+            }
+        }
+    }
+    return $template_path;
 }
 
 ?>
