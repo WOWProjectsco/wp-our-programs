@@ -5,7 +5,7 @@
 * Plugin URI: http://wowdevshop.com
 * Description: This plugin registers the 'program' post type, it let's you manage your companies programs.
 * Author: XicoOfficial
-* Version: 1.0.0
+* Version: 1.2.0
 * License: GPLv2
 * Author URI: http://wowdevshop.com
 * Text Domain: our-programs-by-wowdevshop
@@ -16,6 +16,20 @@
 * @since 1.0.0
 */
 
+/**
+ * Tell WordPress to load a translation file if it exists for the user's language
+ * @since 1.2.0
+ */
+function wds_our_programs_load_plugin_textdomain() {
+    load_plugin_textdomain( 'our-programs-by-wowdevshop', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+}
+
+add_action( 'plugins_loaded', 'wds_our_programs_load_plugin_textdomain' );
+
+
+//
+// Register Custom Program Post Type
+//
 add_action( 'init', 'wds_our_programs_create_post_type' );
 
 // register custom post type to work with
