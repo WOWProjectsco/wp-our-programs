@@ -4,7 +4,7 @@ Donate link: http://wowdevshop.com/
 Tags: programs, company programs, program category, widget, organization programs
 Requires at least: 3.8
 Tested up to: 4.4
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,12 +18,12 @@ Display organization programs with descriptions and links as a post.
 
 = Support =
 
-Looking for a helping hand? [View plugin documentation](http://http://docs.wowdevshop.com/index.php?title=Wordpress/our-programs).
+Looking for a helping hand? [View plugin documentation](http://docs.wowdevshop.com/Wordpress/our-programs).
 
 = Get Involved =
 
 Looking to contribute code to this plugin? Go ahead and [fork the repository over at GitHub](https://github.com/wowdevshop/wp-our-programs).
-(submit pull requests to the latest "release-" branch)
+(submit pull requests to the latest "release-" tag)
 
 == Usage ==
 
@@ -81,9 +81,16 @@ We encourage everyone to contribute their ideas, thoughts and code snippets. Thi
 
 == Changelog ==
 
-No changelogs yet.
+= 1.1.0 =
+* Custom Single template
+* Delete support for custom fields
+* Plugin internationalized
+* Bug fixes
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+ Plugin internationalized & with a custom single template!
 
 = 1.0.0 =
 * Initial release. Yeah!
