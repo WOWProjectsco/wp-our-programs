@@ -3,8 +3,8 @@ Contributors: XicoOfficial, wowdevshop
 Donate link: http://wowdevshop.com/
 Tags: programs, company programs, program category, widget, organization programs
 Requires at least: 3.8
-Tested up to: 4.4
-Stable tag: 1.1.0
+Tested up to: 4.9
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,6 +80,9 @@ We encourage everyone to contribute their ideas, thoughts and code snippets. Thi
 3. Single organization program displayed on the front-end with a little CSS.
 
 == Changelog ==
+
+= 1.2.0 =
+* Tested up to WordPress 4.9
 
 = 1.1.0 =
 * Custom Single template
